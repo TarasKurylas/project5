@@ -53,7 +53,7 @@ body {
   display: flex;
   padding: 24px;
   opacity: 0;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   color: var(--white);
   justify-content: center;
@@ -124,14 +124,14 @@ ul {
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 0.02em;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav:hover,
 .nav:focus {
   color: var(--blue);
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon {
@@ -146,9 +146,6 @@ ul {
 
 .item:hover .icon {
   fill: var(--blue);
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .phone {
@@ -157,14 +154,14 @@ ul {
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 0.02em;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .phone:hover,
 .phone:focus {
   color: var(--blue);
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .border-header {
@@ -212,6 +209,9 @@ ul {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+ color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link:hover,
@@ -273,6 +273,9 @@ ul {
   border-radius: 50px;
   width: 44px;
   height: 44px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-links:last-child {
@@ -293,9 +296,6 @@ ul {
 .social-links:focus {
   fill: var(--white);
   background-color: var(--blue);
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list-item::before {
@@ -414,6 +414,14 @@ ul {
   color: #212121;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-close:hover,
+.btn-close:focus {
+  background-color: var(--blue)
 }
 
 .icon-close {
@@ -461,6 +469,9 @@ ul {
 
   padding: 6px 22px;
   border-radius: 4px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-a:hover,
@@ -646,18 +657,19 @@ ul {
   height: 44px;
 
   margin-right: 10px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-links-footer:last-child {
   margin: 0;
 }
 
-.social-links-footer:hover {
+.social-links-footer:hover,
+.social-links-footer:focus {
   color: rgba(255, 255, 255, 1);
   background-color: var(--blue);
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .street {
@@ -725,6 +737,9 @@ ul {
   border-radius: 4px;
   border: 1px solid rgba(175, 177, 184, 1);
   margin-right: 30px;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-box:last-child {
@@ -735,9 +750,6 @@ ul {
 .client-box:focus {
   fill: #2196f3;
   border-color: #2196f3;
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-list {
